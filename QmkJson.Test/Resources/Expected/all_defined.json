@@ -1,0 +1,630 @@
+{
+    "keyboard_name": "Test Keyboard",
+    "keyboard_folder": "keyboard_folder",
+    "maintainer": "anonymas",
+    "manufacturer": "John Due",
+    "url": "https://www.example.com",
+    "development_board": "promicro_rp2040",
+    "pin_compatible": "elite_c",
+    "processor": "RP2040",
+    "apa102": {
+        "data_pin": "A1",
+        "clock_pin": "A0",
+        "default_brightness": 100
+    },
+    "audio": {
+        "default": {
+            "on": true,
+            "clicky": false
+        },
+        "driver": "dac_basic",
+        "macro_beep": true,
+        "pins": ["A2","A3","A4"],
+        "power_control": {
+            "on_state": 1,
+            "pin": "A5"
+        },
+        "voices": false
+    },
+    "backlight": {
+        "driver": "pwm",
+        "default": {
+            "on": true,
+            "breathing": true,
+            "brightness": 80
+        },
+        "breathing": true,
+        "breathing_period": 90,
+        "levels": 4,
+        "max_brightness": 120,
+        "pin": "A6",
+        "pins": ["A7","A8","A9","A10"],
+        "on_state": 0,
+        "as_caps_lock": false
+    },
+    "battery": {
+        "driver": "adc",
+        "adc": {
+            "pin": "A11",
+            "reference_voltage": 5,
+            "divider_r1": 25,
+            "divider_r2": 15,
+            "resolution": 1024
+        },
+        "sample_interval": 68
+    },
+    "bluetooth": {
+        "driver": "rn42"
+    },
+    "bootmagic": {
+        "enabled": true,
+        "matrix": [0,1]
+    },
+    "board": "something_board",
+    "bootloader": "rp2040",
+    "bootloader_instructions": "Push the reset button on the bottom.",
+    "build": {
+        "debounce_type": "sym_defer_g",
+        "firmware_format": "uf2",
+        "lto": true
+    },
+    "diode_direction": "COL2ROW",
+    "debounce": 3,
+    "caps_word": {
+        "enabled": true,
+        "both_shifts_turns_on": true,
+        "double_tap_shift_turns_on": true,
+        "idle_timeout": 10,
+        "invert_on_shift": false
+    },
+    "combo": {
+        "count": 2,
+        "term": 20
+    },
+    "community_layouts": [
+        "LAYOUT_3x4",
+        "LAYOUT_3x5",
+        "LAYOUT_3x6"
+    ],
+    "dip_switch": {
+        "enabled": true,
+        "matrix_grid": [
+            [0,1],
+            [2,3],
+            [4,5]
+        ],
+        "pins": ["A12","A13","A14","A15"]
+    },
+    "dynamic_keymap": {
+        "eeprom_max_addr": 65535,
+        "layer_count": 28
+    },
+    "eeprom": {
+        "driver": "some_driver",
+        "wear_leveling": {
+            "driver": "rp2040_flash",
+            "backing_size": 4096,
+            "logical_size": 8192
+        }
+    },
+    "encoder": {
+        "enabled": true,
+        "driver": "quadrature",
+        "rotary": [
+            {
+                "pin_a": "A16",
+                "pin_b": "A15",
+                "resolution": 4
+            },
+            {
+                "pin_a": "A17",
+                "pin_b": "A18"
+            },
+            {
+                "pin_a": "A19",
+                "pin_b": "A20",
+                "resolution": 8
+            }
+        ]
+    },
+    "features": {
+        "audio": true,
+        "backlight": true,
+        "battery": true,
+        "bluetooth": true,
+        "bootmagic": true,
+        "caps_word": true,
+        "command": true,
+        "console": true,
+        "dip_switch": true,
+        "dynamic_keymap": true,
+        "encoder": true,
+        "extrakey": true,
+        "haptic": true,
+        "joystick": true,
+        "layer_lock": true,
+        "led_matrix": true,
+        "mousekey": true,
+        "nkro": true,
+        "oled": true,
+        "ps2": true,
+        "rgb_matrix": true,
+        "rgblight": true,
+        "feature1": true,
+        "feature2": true,
+        "feature3": false,
+        "feature4": true,
+        "feature5": true
+    },
+    "indicators": {
+        "caps_lock": "B0",
+        "num_lock": "B1",
+        "scroll_lock": "B2",
+        "compose": "B3",
+        "kana": "B4",
+        "on_state": 0
+    },
+    "joystick": {
+        "enabled": true,
+        "driver": "joystick_driver",
+        "button_count": 28,
+        "axis_resolution": 6,
+        "axes": {
+            "x": {
+                "input_pin": "B5",
+                "low": 0,
+                "rest": 127,
+                "high": 255
+            },
+            "y": {
+                "input_pin": "B6",
+                "low": 10,
+                "rest": 255,
+                "high": 500
+            },
+            "z": {
+                "input_pin": "B7",
+                "low": 50,
+                "rest": 512,
+                "high": 1000
+            },
+            "rx": "virtual",
+            "ry": "virtual",
+            "rz": "virtual"
+        }
+    },
+    "keycodes": [
+        {
+            "key": "MACRO1",
+            "label": "Macro 1",
+            "aliases": ["MCR1"]
+        },
+        {
+            "key": "MACRO2",
+            "label": "Macro 2",
+            "aliases": ["MCR2"]
+        },
+        {
+            "key": "SUPER_AMAGING_KEY_CODE",
+            "label": "Amaging",
+            "aliases": ["SAKC","SPR_AMG"]
+        }
+    ],
+    "layer_lock": {
+        "timeout": 500
+    },
+    "layout_aliases": {
+        "LAYOUT": "LAYOUT_a"
+    },
+    "layouts": {
+        "LAYOUT_a": {
+            "layout": [
+                {"encoder":0,"label":"ESC","matrix":[0,1],"x":0,"y":0},
+                {"label":"1","matrix":[0,2],"x":1,"y":0},
+                {"label":"2","matrix":[0,3],"r":10,"rx":1,"ry":0,"x":2,"y":0},
+                {"label":"3","matrix":[0,2],"h":2,"w":1.25,"x":3,"y":0,"hand":"L"},
+                {"label":"4","matrix":[0,3],"r":-10,"rx":3,"ry":0,"x":4,"y":0,"hand":"L"}
+            ]
+        },
+        "LAYOUT_b": {
+            "filename": "foo.c",
+            "c_macro": true,
+            "json_layout": true,
+            "layout": [
+                {"encoder":0,"label":"ESC","matrix":[0,1],"x":0,"y":0},
+                {"label":"1","matrix":[0,2],"x":1,"y":0},
+                {"label":"2","matrix":[0,3],"r":10,"rx":0,"ry":2,"x":0,"y":0},
+                {"label":"3","matrix":[0,2],"h":2,"w":1.25,"x":0,"y":1,"hand":"R"},
+                {"label":"4","matrix":[0,3],"r":-10,"rx":0,"ry":3,"x":1,"y":1,"hand":"*"}
+            ]
+        }
+    },
+    "haptic": {
+        "driver": "drv2605l"
+    },
+    "host": {
+        "default": {
+            "nkro": true
+        }
+    },
+    "leader_key": {
+        "timing": true,
+        "strict_processing": false,
+        "timeout": 200
+    },
+    "matrix_pins": {
+        "custom": true,
+        "custom_lite": true,
+        "ghost": false,
+        "input_pressed_state": 18,
+        "io_delay": 5,
+        "masked": true,
+        "direct": [
+            ["C0","C1","C2","C3"],
+            ["C4","C5","C6","C7"],
+            [null,"C8",null,"C9"]
+        ],
+        "cols": ["C10","C11","C12","C13","C14"],
+        "rows": ["C15","C16","C17","C18"]
+    },
+    "modules": [
+        "module1",
+        "module2",
+        "module3",
+        "module4"
+    ],
+    "mouse_key": {
+        "enabled": true,
+        "delay": 8,
+        "interval": 12,
+        "max_speed": 80,
+        "time_to_max": 28,
+        "wheel_delay": 18
+    },
+    "oneshot": {
+        "tap_toggle": 3,
+        "timeout": 13
+    },
+    "led_matrix": {
+        "animations": {
+            "none": true,
+            "solid": true,
+            "alphas_mods": true,
+            "breathing": true,
+            "band": true,
+            "band_pinwheel": true,
+            "band_spiral": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "cycle_out_in": true,
+            "dual_beacon": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_multinexus": true,
+            "splash": true,
+            "multisplash": true,
+            "wave_left_right": true,
+            "wave_up_down": true,
+            "typing_heatmap": true
+        },
+        "default": {
+            "on": true,
+            "animation": "splash",
+            "val": 120,
+            "speed": 80,
+            "flags": 255
+        },
+        "driver": "snled27351",
+        "center_point": [5,13],
+        "flag_steps": [0,12,2],
+        "max_brightness": 100,
+        "timeout": 10000,
+        "val_steps": 10,
+        "speed_steps": 25,
+        "led_flush_limit": 10,
+        "led_process_limit": 20,
+        "react_on_keyup": true,
+        "sleep": true,
+        "split_count": [5,10],
+        "layout": [
+            {"matrix":[0,1],"x":0,"y":0,"flags":255},
+            {"matrix":[0,2],"x":1,"y":0,"flags":8},
+            {"matrix":[0,3],"x":2,"y":0,"flags":5}
+        ]
+    },
+    "rgb_matrix": {
+        "animations": {
+            "none": true,
+            "solid_color": true,
+            "alphas_mods": true,
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "breathing": true,
+            "band_sat": true,
+            "band_val": true,
+            "band_pinwheel_sat": true,
+            "band_pinwheel_val": true,
+            "band_spiral_sat": true,
+            "band_spiral_val": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "rainbow_moving_chevron": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "rainbow_pinwheels": true,
+            "flower_blooming": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "pixel_fractal": true,
+            "pixel_flow": true,
+            "pixel_rain": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_multinexus": true,
+            "splash": true,
+            "multisplash": true,
+            "solid_splash": true,
+            "solid_multisplash": true,
+            "starlight": true,
+            "starlight_smooth": true,
+            "starlight_dual_hue": true,
+            "starlight_dual_sat": true,
+            "riverflow": true
+        },
+        "default": {
+            "on": true,
+            "animation": "splash",
+            "hue": 85,
+            "sat": 128,
+            "val": 100,
+            "speed": 35,
+            "flags": 255
+        },
+        "driver": "ws2812",
+        "center_point": [10,15],
+        "flag_steps": [255,10,12],
+        "max_brightness": 100,
+        "timeout": 200,
+        "hue_steps": 5,
+        "sat_steps": 10,
+        "val_steps": 2,
+        "speed_steps": 20,
+        "led_flush_limit": 100,
+        "led_process_limit": 25,
+        "react_on_keyup": true,
+        "sleep": true,
+        "split_count": [10,8],
+        "layout": [
+            {"matrix":[0,0],"x":0,"y":0,"flags":255},
+            {"matrix":[0,1],"x":1,"y":0,"flags":8},
+            {"matrix":[1,0],"x":0,"y":0,"flags":2},
+            {"matrix":[1,1],"x":1,"y":1,"flags":5}
+        ]
+    },
+    "rgblight": {
+        "animations": {
+            "static_light": true,
+            "breathing": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "snake": true,
+            "knight": true,
+            "christmas": true,
+            "static_gradient": true,
+            "rgb_test": true,
+            "alternating": true,
+            "twinkle": true
+        },
+        "brightness_steps": 5,
+        "default": {
+            "on": true,
+            "animation": "twinkle",
+            "hue": 110,
+            "sat": 88,
+            "val": 90,
+            "speed": 40
+        },
+        "driver": "ws2812",
+        "hue_steps": 12,
+        "layers": {
+            "blink": true,
+            "enabled": true,
+            "max": 400,
+            "override_rgb": true
+        },
+        "led_count": 19,
+        "led_map": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "max_brightness": 127,
+        "saturation_steps": 8,
+        "sleep": true,
+        "split": true,
+        "split_count": [7,12]
+    },
+    "secure": {
+        "enabled": true,
+        "unlock_timeout": 360000,
+        "idle_timeout": 60000,
+        "unlock_sequence": [
+            [0,1],
+            [2,2],
+            [1,3],
+            [4,4]
+        ]
+    },
+    "stenography": {
+        "enabled": true,
+        "combined_map": true,
+        "default": {
+            "mode": "txbolt"
+        },
+        "protocol": "txbolt"
+    },
+    "ps2": {
+        "enabled": true,
+        "mouse_enabled": true,
+        "clock_pin": "GP0",
+        "data_pin": "GP1",
+        "driver": "interrupt"
+    },
+    "split": {
+        "enabled": true,
+        "bootmagic": {
+            "matrix": [0,0]
+        },
+        "matrix_pins": {
+            "right": {
+                "direct": [
+                    ["LINE_PIN0","LINE_PIN1","LINE_PIN2","LINE_PIN3"],
+                    ["LINE_PIN4","LINE_PIN5","LINE_PIN6","LINE_PIN7"],
+                    ["LINE_PIN8",null,null,"LINE_PIN9"]
+                ],
+                "cols": ["LINE_PIN10","LINE_PIN11","LINE_PIN12","LINE_PIN13","LINE_PIN14"],
+                "rows": ["LINE_PIN15","LINE_PIN16","LINE_PIN17"],
+                "unused": ["LINE_PIN18","LINE_PIN19","LINE_PIN20"]
+            }
+        },
+        "dip_switch": {
+            "right": {
+                "pins": ["E0","E1","E2","E3"]
+            }
+        },
+        "encoder": {
+            "right": {
+                "driver": "quadrature",
+                "rotary": [
+                    {
+                        "pin_a": "F0",
+                        "pin_b": "F1",
+                        "resolution": 4
+                    },
+                    {
+                        "pin_a": "F2",
+                        "pin_b": "F3",
+                        "resolution": 8
+                    },
+                    {
+                        "pin_a": "F4",
+                        "pin_b": "F5"
+                    }
+                ]
+            }
+        },
+        "handedness": {
+            "pin": "F6",
+            "matrix_grid": ["F7","F8"]
+        },
+        "serial": {
+            "driver": "bitbang",
+            "pin": "F9",
+            "speed": 5
+        },
+        "transport": {
+            "protocol": "serial",
+            "sync": {
+                "activity": true,
+                "detected_os": true,
+                "haptic": true,
+                "layer_state": true,
+                "indicators": true,
+                "matrix_state": true,
+                "modifiers": true,
+                "oled": true,
+                "st7565": true,
+                "wpm": true
+            },
+            "watchdog": true,
+            "watchdog_timeout": 10000
+        },
+        "usb_detect": {
+            "enabled": true,
+            "polling_interval": 200,
+            "timeout": 500
+        }
+    },
+    "tags": [
+        "tag1",
+        "tag2",
+        "tag3",
+        "tag4"
+    ],
+    "tapping": {
+        "chordal_hold": true,
+        "flow_tap_term": 50,
+        "force_hold": true,
+        "force_hold_per_key": true,
+        "ignore_mod_tap_interrupt": true,
+        "hold_on_other_key_press": true,
+        "hold_on_other_key_press_per_key": true,
+        "permissive_hold": true,
+        "permissive_hold_per_key": true,
+        "retro": false,
+        "retro_per_key": false,
+        "speculative_hold": true,
+        "speculative_hold_flow_term": 120,
+        "speculative_hold_one_key": true,
+        "term": 200,
+        "term_per_key": true,
+        "toggle": 35
+    },
+    "usb": {
+        "device_version": "0.1.2",
+        "pid": "0x1234",
+        "vid": "0xABCD",
+        "max_power": 99999,
+        "no_startup_check": true,
+        "polling_interval": 30,
+        "shared_endpoint": {
+            "keyboard": true,
+            "mouse": true
+        },
+        "suspend_wakeup_delay": 10,
+        "wait_for_enumeration": false
+    },
+    "qmk": {
+        "keys_per_scan": 10,
+        "tap_keycode_delay": 20,
+        "tap_capslock_delay": 100,
+        "locking": {
+            "enabled": true,
+            "resync": true
+        }
+    },
+    "qmk_lufa_bootloader": {
+        "esc_output": "G0",
+        "esc_input": "G1",
+        "led": "G2",
+        "speaker": "G3"
+    },
+    "ws2812": {
+        "driver": "pwm",
+        "pin": "H0",
+        "rgbw": true,
+        "i2c_address": "0x83",
+        "i2c_timeout": 300
+    }
+}
