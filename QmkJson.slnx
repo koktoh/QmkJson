@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QmkJson.Test/QmkJson.Test.csproj" Id="27f59caf-315f-4d13-a5a7-fa3a4a21f2b0" />
+  <Project Path="QmkJson/QmkJson.csproj" />
+</Solution>
